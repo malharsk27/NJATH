@@ -1,0 +1,395 @@
+/*
+ * Copyright (C) 2014 radsaggi(ashutosh)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@import "./fonts/vanthian.css";
+@import "./fonts/zephyr.css";
+
+* { 
+    margin: 0; 
+    outline: none; 
+}
+body { 
+    background: url("./images/cover.jpg") repeat scroll center center rgb(100, 91, 92);
+}
+
+#user-info {
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: 2;
+}
+#user-info #level{
+    position: absolute; 
+    right: 1.5em;
+    top: 1.5em;
+    height: 2em;
+    width: 2em;
+    box-shadow: 0 0 .8em .2em rgba(0,0,0,.32) inset;
+    border: 0.2em solid rgba(0,0,0,.32);
+    text-align: center;
+    font: italic bold 1em/2em Georgia, Serif;
+    color: #222;
+    border-radius: 1.5em;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    background: rgb(224, 45, 45);
+    -webkit-animation: throb 1.5s ease-in-out infinite alternate;
+    animation: throb 1.5s ease-in-out infinite alternate;
+}
+@keyframes throb {
+    0%{opacity: 0;}
+    100%{opacity: 1; transform: scale(2.5); top: 2.5em;
+         right: 2.5em;}
+}
+@-webkit-keyframes throb {
+    0%{opacity: 0;}
+    100%{opacity: 1; -webkit-transform: scale(2.5); top: 2.5em;
+         right: 2.5em;}
+}
+#user-info #user {
+    font-family: "Zephyr";
+    position: absolute;
+    right: 2.5em;
+    top: 0.5em;
+    color: #fff;
+    text-shadow: 0 0 2px #222 inset;
+}
+
+#question-div {
+    position: relative;
+    height: 25em;
+    margin: 5em auto;
+}
+#question-div.question-both {
+    width: 80em;
+}
+#question-div.question-text, #question-div.question-image {
+    width: 40em;
+}
+#question-div img {
+    position: absolute;
+    width: 40em;
+    height: 25em;
+    right: 0;
+    top: 0;
+}
+#question-div img#cropped {
+    clip: rect(0, auto, 25em, 0);
+    width: auto;
+    height: auto;
+}
+#question-div #question-text {
+    position: absolute;
+    left: 0;
+    top: 2em;
+    text-align: center;
+    background:
+        radial-gradient(#bbb 15%, transparent 16%) 0 0,
+        radial-gradient(#bbb 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#d3d3d3;
+    background-size:16px 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px #999;
+    padding: 1em;
+}
+#question-div #question-text h2 {
+    width: 23em;
+    height: 12em;
+}
+
+@keyframes riseup {
+    0%{ bottom: -150px; }
+    100%{ bottom: 0; }
+}
+@-webkit-keyframes riseup {
+    0%{ bottom: -150px; }
+    100%{ bottom: 0; }
+}
+@-ms-keyframes riseup {
+    0%{ bottom: -150px; }
+    100%{ bottom: 0; }
+}
+@-moz-keyframes riseup {
+    0%{ bottom: -150px; }
+    100%{ bottom: 0; }
+}
+#form-wrapper {
+    position: fixed;
+    bottom: -150px;
+    width: 50em;
+    left: 16em;
+    padding: 2em;
+    padding-bottom: 1.2em;
+    background-color: #3a7ccb;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 -5px 15px #000, 0 15px 20px 6px #1e4675 inset;
+    -webkit-animation: riseup 2s ease-out 1s 1 normal;
+    -moz-animation: riseup 2s ease-out 1s 1 normal;
+    -ms-animation: riseup 2s ease-out 1s 1 normal;
+    animation: riseup 2s ease-out 1s 1 normal;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+#form-wrapper #hint-btn {
+    position: absolute;
+    background: #111;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    border-top: solid 5px #444;
+    text-decoration: none;
+    color: #79A1D1;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-transition: border 0.6s;
+    -moz-transition: border 0.6s;
+    -o-transition: border 0.6s;
+    transition: border 0.6s;
+}
+
+#form-wrapper #hint-btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-transform: none;
+    -webkit-transform: rotateX(270deg);
+    transform: perspective(100px) rotateX(270deg);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    padding-top: 10%;
+    background: #444;
+    -o-transition: -o-transform 0.6s;
+    -webkit-transition: -webkit-transform 0.6s;
+    -moz-transition: -moz-transform 0.6s;
+    transition: transform 0.6s;
+    border-radius: 0 0 5px 5px;
+}
+#form-wrapper #hint-btn:hover {
+    border-top: solid 5px #999;
+}
+#form-wrapper #hint-btn:hover span {
+    -webkit-transform: none;
+    transform: none;
+}
+
+#form-wrapper #ans {
+    display: block;
+    padding: 5px;
+    border: 1px solid #DDD;
+    background: -moz-linear-gradient(center bottom , #fff,  #ccc 1px, #fff 20px);    
+    background: -webkit-gradient(linear, left bottom, left 20, from(#fff), color-stop(5%, #ccc) to(#fff));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#FFFFFF');
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 0 2px #DDD;
+    -webkit-box-shadow: 0 0 2px #DDD;
+    box-shadow: 0 0 2px #DDD;
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#form-wrapper #ans:hover {
+    border:1px solid #666;
+}
+#form-wrapper #ans:focus {
+    box-shadow:0 0 12px #3a7ccb;
+}
+#form-wrapper #submit-btn{
+    font-family: "Vanthian";
+    background: #80a9da;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(#80a9da,0),color-stop(#6f97c5,1));
+    background: -webkit-linear-gradient(top, #80a9da 0%, #6f97c5 100%);
+    background: -moz-linear-gradient(top, #80a9da 0%, #6f97c5 100%);
+    background: -o-linear-gradient(top, #80a9da 0%, #6f97c5 100%);
+    background: linear-gradient(top, #80a9da 0%, #6f97c5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80a9da', endColorstr='#6f97c5',GradientType=0 );
+    padding-left: 22px;
+    padding-right: 80px;
+    height: 38px;
+    display: block;
+    position: relative;
+    border: 1px solid #5d81ab;
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    -moz-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    float: left;
+    clear: both;
+    margin: 1em 0 0 20em;
+    overflow: hidden;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    text-decoration: none;
+}
+#form-wrapper #submit-btn .btn-text{
+    padding-top: 10px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform:uppercase;
+    white-space: nowrap;
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+    color: #446388;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#form-wrapper #submit-btn .btn-slide-text{
+    position:absolute;
+    height:100%;
+    top:0;
+    left: 98px;
+    width:0;
+    background:#63707e;
+    text-shadow:0px -1px 1px #363f49;
+    color:#fff;
+    font-size:18px;
+    white-space:nowrap;
+    text-align:left;
+    text-indent:10px;
+    overflow:hidden;
+    line-height:38px;
+    -webkit-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+    -moz-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+    box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+    -webkit-transition:width 0.3s linear;
+    -moz-transition:width 0.3s linear;
+    -o-transition:width 0.3s linear;
+    transition:width 0.3s linear;
+}
+#form-wrapper #submit-btn .btn-icon-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 52px;
+    border-left: 1px solid #5d81ab;
+    -webkit-box-shadow: 1px 0px 1px rgba(255,255,255,0.4) inset;
+    -moz-box-shadow: 1px 0px 1px rgba(255,255,255,0.4) inset;
+    box-shadow: 1px 0px 1px rgba(255,255,255,0.4) inset;
+}
+#form-wrapper #submit-btn .btn-icon-right span{
+    width:38px;
+    height:38px;
+    opacity:0.7;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-20px 0px 0px -20px;
+    background:transparent url(./images/arrow_right.png) no-repeat 50% 55%;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+#form-wrapper #submit-btn:hover{
+    padding-right: 13.7em;
+    -webkit-padding-end: 27.8%;
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+}
+#form-wrapper #submit-btn:hover .btn-text{
+    text-shadow:0px 1px 1px #5d81ab;
+    color:#fff;
+}
+#form-wrapper #submit-btn:hover .btn-slide-text{
+    width:auto;
+    padding-right: 7px;
+}
+#form-wrapper #submit-btn:hover .btn-icon-right span{
+    opacity:1;
+}
+#form-wrapper #submit-btn:active{
+    position:relative;
+    top:1px;
+    background:#5d81ab;
+    -webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    -moz-box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    box-shadow:1px 1px 2px rgba(0,0,0,0.4) inset;
+    border-color:#80a9da;
+}
+#complete-hide {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(8, 8, 8, 0.6);
+    animation: vanish 1s ease-out 2s 1 normal;
+    -webkit-animation: vanish 1s ease-out 2s 1 normal;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 100;
+}
+
+#complete-hide #message-display {
+    position: static;
+    width: 500px;
+    margin: 100px auto;
+    padding: 50px;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px 2px #ddd;
+}
+
+#complete-hide #message-display h2 {
+    text-align: center;
+    color: #a81a1a;
+}
+
+@keyframes vanish {
+    0%{display:block;opacity:1;}
+    90%{opacity:0.5;}
+    95%{opacity:0.25;}
+    100%{opacity:0;display:none;z-index:-1;}
+}
+@-webkit-keyframes vanish {
+    0%{display:block;opacity:1;}
+    90%{opacity:0.5;}
+    95%{opacity:0.25;}
+    100%{opacity:0;display:none;z-index:-1;}
+}
