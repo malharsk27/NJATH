@@ -23,19 +23,19 @@ if (!file_exists("./support/check.php")) {
     die();
 }
 
-if (!isset($db_username) && !isset($db_password)) {
-    $file = $_SERVER["DOCUMENT_ROOT"] . "/../njath.anwesha2014.properties";
-    if (!file_exists($file)) {
-        die("Database cannot be opened. Credentials missing....");
-    }
+//if (!isset($db_username) && !isset($db_password)) {
+  //  $file = $_SERVER["DOCUMENT_ROOT"] . "/../njath.anwesha2014.properties";
+   // if (!file_exists($file)) {
+  //      die("Database cannot be opened. Credentials missing....");
+    //}
 
-    $handle = fopen($file, 'r');
-    $cred = fscanf($handle, "%s %s");
-    $db_username = $cred[0];
-    $db_password = $cred[1];
+   // $handle = fopen($file, 'r');
+    //$cred = fscanf($handle, "%s %s");
+    $db_username = "root";
+    $db_password = "";
 
-    fclose($handle);
-}
+ //   fclose($handle);
+//}
 
 if (!isset($db_connection)) {
 
