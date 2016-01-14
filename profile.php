@@ -100,7 +100,7 @@ function check_level($advance) {
     return "Level Advanced";
 }
 
-function check() {
+function check_profile() {
     global $_POST;
     global $CONST;
     if (isset($_POST["question"]) && filter_var($_POST["question"], FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => "/^{$_SESSION["level"]}[1-{$CONST["questions"]}]$/")))) {
@@ -112,7 +112,7 @@ function check() {
     }
 }
 
-$wrong_msg = check();
+$wrong_msg = check_profile();
 unset($_POST);
 ?>
 
@@ -208,7 +208,8 @@ unset($_POST);
                         . "LEFT JOIN `Questions` AS `Q` ON `Q-U`.`Question ID` = `Q`.`Question ID` "
                         . "WHERE `Q-U`.`Question Number` LIKE '{$_SESSION["level"]}_' ORDER BY `Q-U`.`Question Number`";
                 $query = mysqli_query($db_connection, $query);
-
+                // var_dump($query);
+                // die();
                 for ($i = 0; $i < $CONST["questions"]; $i++) {
                     $questions[$i] = mysqli_fetch_array($query);
                     $questions[$i]["Score"] = $CONST["question-score"];

@@ -25,18 +25,26 @@ function check() {
     global $CONST;
     $user = $_POST["usernamesignup"];
     $anw = $_POST["anweshasignup"];
-    $anw = intval(substr($anw, 3));
+    // $anw = intval(substr($anw, 3));
     $pass = $_POST["passwordsignup"];
     $hash = sha1($pass);
 
     if (!filter_var($user, FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^(\w){1,15}$/')))) {
         $error["msg"] = "Inappropriate username";
         $error["component"] = "username";
+        return;
     }
-
-    if (!verify_anw_id($anw, $hash)) {
-        $error["msg"] = "Inappropriate Anwesha ID.";
+    if (preg_match('/ANW[0-9]{4}/', $anw)) {
+        $anw = intval(substr($anw, 3));
+    } else {
+        $error["msg"] = "Inappropriate id";
         $error["component"] = "anwesha";
+        return;
+    }
+    if (!verify_anw_id($anw, $hash)) {
+        $error["msg"] = "Inappropriate Anwesha ID and password.";
+        $error["component"] = "anwesha";
+        return;
     }
 
     if(empty($_SESSION['6_letters_code'] ) || $_SESSION['6_letters_code'] != $_POST['6_letters_code']){
@@ -45,6 +53,7 @@ function check() {
 
         $error["msg"] = "The captcha code does not match!";
         $error["component"] = "captcha";
+        return;
     }
 
 }

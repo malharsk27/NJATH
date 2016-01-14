@@ -51,7 +51,6 @@ if (!isset($_SESSION["username"], $_SESSION["level"], $_SESSION["question"], $_S
     $_SESSION["question"] = "";
     $_SESSION["level-score"] = $query["Level Score"];
     $_SESSION["total-score"] = $query["Total Score"];
-  //  $_SESSION["tchests"] = $query["TChests Unlocked"];
     $_SESSION["increase"] = array();
     $_SESSION["prev-salt"] = "";
     $_SESSION["salt"] = "";
@@ -68,16 +67,16 @@ load_constants();
 $_SESSION["prev-salt"] = $_SESSION["salt"];
 $_SESSION["salt"] = sha1(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM));
 
-$query = "SELECT `Disqualified` FROM `Contestants` WHERE `Username` = '{$_SESSION["username"]}'";
-$query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+// $query = "SELECT `Disqualified` FROM `Contestants` WHERE `username` = '{$_SESSION["username"]}'";
+// $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
 
-if (!isset($query["Disqualified"]) || $query["Disqualified"] == 1) {
-    destroy_session();
-    mysqli_close($db_connection);
-    header("Location: ./index.php?msg=You%20have%20been%20disqualified...");
-    die();
-}
-unset($query);
+// if (!isset($query["Disqualified"]) || $query["Disqualified"] == 1) {
+//     destroy_session();
+//     mysqli_close($db_connection);
+//     header("Location: ./index.php?msg=You%20have%20been%20disqualified...");
+//     die();
+// }
+// unset($query);
 
 if (isset($from)) {
     if (checkFromVariable_Outside($from)) {
