@@ -32,6 +32,7 @@ h2 {
     text-shadow: 0 1px 3px #222222; 
 }
 #table .data-table {
+    opacity: 0.9;
     margin: 50px auto;
     border-collapse:collapse;
     font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -46,13 +47,14 @@ h2 {
         inset 0 1px rgba(0,0,0,0.25);
 }
 #table .data-table th {
+
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     padding: 1em;
     color: rgba(0,0,0,0.45);
     text-shadow: 0 0 1px rgba(0,0,0,0.1);
     font-size: 1.5em;
-    background: #336ca6;
+    background: #E2382E;
 }
 #table .data-table td {
     color: #f7f7f7;

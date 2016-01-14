@@ -125,7 +125,7 @@ require './support/check.php';
 
 
         <div class="login">
-            <h2> NJATH Login : </h2>
+            <h2> Login </h2>
             <form method="post" action="" class="loginform">
                 <p>
                     <label for="login">Username:</label>

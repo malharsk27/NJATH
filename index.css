@@ -44,13 +44,14 @@ h2 {
 }
 
 .login {
-   /* background:
-        radial-gradient(black 15%, transparent 16%) 0 0,
-        radial-gradient(black 15%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;*/
+    background:
+        opacity:0.5;
+        radial-gradient(black 15%,transparent 90%) 0 0,
+        radial-gradient(black 15%, transparent 90%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 90%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 90%) 8px 9px;
+    
+    background-size:16px 16px;
 
     box-shadow: 0 0 10px 4px #222222;
     position:absolute;
@@ -59,6 +60,7 @@ h2 {
     font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height:25em;
     width:31em;
+
 }
 
 .login h2 {
@@ -66,7 +68,7 @@ h2 {
     font-weight: bold;
     font-size: 32px;
     color: #222222;
-    text-shadow: 0 0 2px #00a1d2;
+    text-shadow: 0 0 2px #7F3B32;
     margin-top: 20px;
     letter-spacing: 1px;
 }
@@ -82,7 +84,7 @@ h2 {
 }
 
 .login a {
-    color: #00a1d2;
+    color: #B04539;
     text-decoration: none;
 }
 .login a:hover {
@@ -115,7 +117,7 @@ h2 {
     padding: 0 10px;
     width: 300px;
     height: 40px;
-    color: #bbb;
+    color: white;
     text-shadow: 1px 1px 1px black;
     background: rgba(0, 0, 0, 0.16);
     border: 0;
@@ -124,14 +126,14 @@ h2 {
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
 }
 .login input[type=text]:focus, .login input[type=password]:focus {
-    color: #054C7D;
+    color: #D94337;
     background: rgba(0, 0, 0, 0.1);
     outline: 0;
-    box-shadow: 0 0 5px #00a1d2;
+    box-shadow: 0 0 5px black;
 }
 
 .login input[type=text]:hover, .login input[type=password]:hover {
-    box-shadow: 0 0 5px #00a1d2;
+    box-shadow: 0 0 5px black;
 }
 
 .login label {
@@ -296,7 +298,7 @@ h2 {
     background: -o-linear-gradient(top, rgba(0,75,103,1) 0%,rgba(0,53,72,1) 100%);
     background: -ms-linear-gradient(top, rgba(0,75,103,1) 0%,rgba(0,53,72,1) 100%);
     background: linear-gradient(top, rgba(0,75,103,1) 0%,rgba(0,53,72,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004b67', endColorstr='#003548',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='##7F3B32', endColorstr='#003548',GradientType=0 );
 }
 
 #news_ticker ul {
