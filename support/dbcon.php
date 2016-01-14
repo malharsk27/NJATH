@@ -16,27 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-
-if (!file_exists("./support/check.php")) {
-    header("Location: ./index.php");
-    die();
-}
-
-//if (!isset($db_username) && !isset($db_password)) {
-  //  $file = $_SERVER["DOCUMENT_ROOT"] . "/../njath.anwesha2014.properties";
-   // if (!file_exists($file)) {
-  //      die("Database cannot be opened. Credentials missing....");
-    //}
-
-   // $handle = fopen($file, 'r');
-    //$cred = fscanf($handle, "%s %s");
-    $db_username = "root";
-    $db_password = "";
-
- //   fclose($handle);
-//}
-
+$db_username = "root";
+$db_password = "";
 if (!isset($db_connection)) {
 
     if (!function_exists("db_disconnect")) {

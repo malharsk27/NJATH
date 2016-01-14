@@ -19,7 +19,7 @@
 
 
 
-
+require_once 'function.php';
 // error_reporting(E_ALL);
 // ini_set("display_errors", 1);
 function checkLogin() {
@@ -43,18 +43,18 @@ function checkLogin() {
    //      return $error;
    //  }
 
-    $query = "SELECT * FROM `Contestants` WHERE `Username` = '{$user}'";
+    $query = "SELECT * FROM `Contestants` WHERE `username` = '{$user}'";
     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
    //mysqli_close($db_connection);
-    if (!isset($query["Hash"])) {
+    if (!isset($query["password"])) {
         $error["type"] = "username";
         $error["error"] = TRUE;
         return $error;
     }
     
-    $hash = crypt($pass, $query["Hash"]);
+    $hash = sha1($pass);
 
-    if ($hash != $query["Hash"]) {
+    if ($hash != $query["password"]) {
         $error["type"] = "passwords";
         $error["error"] = TRUE;
         return $error;
@@ -74,7 +74,7 @@ if (isset($_POST["login"]) && isset($_POST["password"])) {
     }
 }
 $from = "homepage";
-
+require_once 'function.php';
 require './support/check.php';
 ?>
 

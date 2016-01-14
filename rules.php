@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2014 radsaggi(ashutosh)
+ * Copyright (C) 2015 Sunny Narayan
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
+require_once 'function.php';
 require_once './support/dbcon.php';
 $from = "leaderboard";
 require_once './support/check.php';

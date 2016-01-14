@@ -21,6 +21,7 @@
 
 
 $from = "leaderboard";
+require_once 'function.php';
 require './support/check.php';
 require_once './support/dbcon.php';
 ?>
@@ -93,7 +94,7 @@ require_once './support/dbcon.php';
                 <?php
                 // include "../php/functions.php";
                 $query = "SELECT * FROM `Contestants` AS `C` "
-                        . "LEFT JOIN `ContestantsData` AS `CD` ON `C`.`Username` = `CD`.`Username` "
+                        . "LEFT JOIN `ContestantsData` AS `CD` ON `C`.`username` = `CD`.`Username` "
                         . "WHERE `C`.`Disqualified` = 0 "
                         . "ORDER BY `Total Score` DESC LIMIT 0, 20";
                 $result = mysqli_query($db_connection, $query);
@@ -131,8 +132,8 @@ require_once './support/dbcon.php';
                 <table class="data-table">
                     <?php
                     $query = "SELECT * FROM `Contestants` AS `C` "
-                            . "LEFT JOIN `ContestantsData` AS `CD` ON `C`.`Username` = `CD`.`Username` "
-                            . "WHERE `C`.`Username`='{$_SESSION["username"]}' ";
+                            . "LEFT JOIN `ContestantsData` AS `CD` ON `C`.`username` = `CD`.`Username` "
+                            . "WHERE `C`.`username`='{$_SESSION["username"]}' ";
                     $result = mysqli_fetch_array(mysqli_query($db_connection, $query));
                     ?>
                     <tr<?php if ($user) echo 'class="user"' ?>>
