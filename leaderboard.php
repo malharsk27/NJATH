@@ -21,6 +21,7 @@
 
 
 $from = "leaderboard";
+require_once 'function.php';
 require './support/check.php';
 require_once './support/dbcon.php';
 ?>

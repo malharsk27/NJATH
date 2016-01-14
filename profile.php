@@ -19,9 +19,8 @@
 
 
 $from = "profilepage";
-
+require_once 'function.php';
 require './support/check.php';
-require './support/dbcon.php';
 
 function check_question($question) {
     global $db_connection;

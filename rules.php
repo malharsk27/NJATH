@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
+require_once 'function.php';
 require_once './support/dbcon.php';
 $from = "leaderboard";
 require_once './support/check.php';

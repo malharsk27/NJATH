@@ -19,9 +19,9 @@
 
 
 $from = "questionpage";
-
+require_once 'function.php';
 require_once './support/check.php';
-require_once './support/dbcon.php';
+// require_once './support/dbcon.php';
 
 function startsWith($haystack, $needle) {
     return $needle === "" || strpos($haystack, $needle) === 0;

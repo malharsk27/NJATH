@@ -19,7 +19,7 @@
 
 
 $from = "logoutpage";
-
+require_once 'function.php';
 require './support/check.php';
 
 destroy_session();

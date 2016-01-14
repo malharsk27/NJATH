@@ -19,7 +19,7 @@
 
 
 
-
+require_once 'function.php';
 // error_reporting(E_ALL);
 // ini_set("display_errors", 1);
 function checkLogin() {
@@ -74,7 +74,7 @@ if (isset($_POST["login"]) && isset($_POST["password"])) {
     }
 }
 $from = "homepage";
-
+require_once 'function.php';
 require './support/check.php';
 ?>
 

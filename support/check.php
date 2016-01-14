@@ -1,167 +1,28 @@
 <?php
-
-/*
- * Copyright (C) 2014 radsaggi(ashutosh)
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-
-
-if (!file_exists("./support/dbcon.php")) {
-    header("Location: ./index.php");
-    die();
-}
 require_once './support/dbcon.php';
 session_start();
+// if (!isset($CONST)) {
 
-if (!function_exists("destroy_session")) {
+//     $CONST["advance"] = 6;
 
-    function destroy_session() {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), '', 0, $params['path'], $params['domain'], $params['secure'], isset($params['httponly']));
-        session_destroy();
-        unset($_SESSION);
-        session_write_close();
-    }
+//     $CONST["njath-home"] = "www.anwesha.info/njath/";
+//     global $db_connection;
+//     $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,1,1)) AS `C` FROM `Questions`";
+//     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+//     $CONST["levels"] = $query["C"];
+//     $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,2,1)) AS `C` FROM `Questions`";
+//     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+//     $CONST["questions"] = $query["C"];
+//     $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,3,1)) AS `C` FROM `Questions`";
+//     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+//     $CONST["buffer"] = $query["C"];
 
-}
-
-if (!function_exists("push_increase")) {
-
-    function push_increase($text, $value, $both = true) {
-        global $_SESSION;
-        $n = count($_SESSION["increase"]);
-        $_SESSION["increase"][$n]["text"] = $text;
-        $_SESSION["increase"][$n]["value"] = $value;
-	
-	if ($both) {
-            $_SESSION["level-score"] += $value;
-        }
-        $_SESSION["total-score"] += $value;
-    }
-
-}
-
-if (!function_exists("sync_scores")) {
-
-    function sync_scores() {
-        global $_SESSION;
-        require_once './support/dbcon.php';
-        global $db_connection;
-        $query = "UPDATE `ContestantsData` "
-                . "SET `Level Score` = '{$_SESSION["level-score"]}', `Total Score` = '{$_SESSION["total-score"]}' "
-                . "WHERE `Username` = '{$_SESSION["username"]}';";
-        mysqli_query($db_connection, $query);
-    }
-
-}
-
-/*if (!function_exists("get_tchest_count")) {
-
-    function get_tchest_count() {
-        global $_SESSION;
-        $val = $_SESSION["tchests"];
-        $count = 0;
-
-        for ($i = 0; $i < 4; $i++) {
-            if ((($val >> $i) & 1) == 1) {
-                $count++;
-            }
-        }
-        return $count;
-    }
-
-}*/
-
-/*if (!function_exists("create_tchest_string")) {
-
-// The correct format for tchest query is as follows
-// md5([LevelNo][QuestionNo][TChestType][Salt])
-// take first 8 characters of the hash
-
-    function create_tchest_string($type, $salt) {
-        global $_SESSION;
-        $hash = md5($_SESSION["level"] . $_SESSION["question"] . $type . $salt);
-        return substr($hash, 0, 12);
-    }
-
-}*/
-
-if (!isset($CONST)) {
-
-    $CONST["advance"] = 6;
-  //  $CONST["tchest-tries"] = 5;
-   // $CONST["tchest-keyword"] = "ilovenjath";
-
-    /*need changes*/
-    $CONST["njath-home"] = "www.anwesha.info/njath/";
-        
-    require_once './support/dbcon.php';
-    global $db_connection;
-    $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,1,1)) AS `C` FROM `Questions`";
-    $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
-    $CONST["levels"] = $query["C"];
-    $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,2,1)) AS `C` FROM `Questions`";
-    $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
-    $CONST["questions"] = $query["C"];
-    $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,3,1)) AS `C` FROM `Questions`";
-    $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
-    $CONST["buffer"] = $query["C"];
-    
-    if (!function_exists("load_constants")) {
-	 function load_constants() {
-	 	global $CONST;
-	 	global $_SESSION;
-	 	
-	 	$l = $_SESSION["level"];
-    		$CONST["advance-bonus"] = 40 * $l;	 	
-	        $CONST["question-cost"] = 20 * $l;
-	 	$CONST["question-score"] = 30 * $l;
-	 	//$CONST["question-hinted-score"] = 20 * $l;
-	       // $CONST["tchest-bonus"] = 10 * $l;
-    		$CONST["question-penalty"] = 30 * $l;
-    		$CONST["bonus-quest"] = 50 * $l;
-	 }
-    }
-}
-
-function checkFromVariable_Account($from) {
-    return ($from === "questionpage") || $from === "profilepage" || /*$from === "tchestpage" ||*/ $from === "logoutpage";
-}
-
-function checkFromVariable_Outside($from) {
-    return $from === "homepage" || $from === "registerpage";
-}
-
-function checkFromVariable_Common($from) {
-    return $from === "rulespage" || $from === "leaderboardpage";
-}
-
-//VARIABLES
-//username
-//level
-//question
-//increase[]
-//level-score
-//total-score
-//advance-level
-//tchests
-//salt
-//prev-salt
-//die();
-if (!isset($_SESSION["username"], $_SESSION["level"], $_SESSION["question"], $_SESSION["level-score"], $_SESSION["total-score"], $_SESSION["salt"], $_SESSION["prev-salt"], $_SESSION["advance-level"]/*, $_SESSION["tchests"]*/)) {
+// }
+// var_dump($_SESSION);
+// echo "<br>";
+// var_dump($_POST);
+// die();
+if (!isset($_SESSION["username"], $_SESSION["level"], $_SESSION["question"], $_SESSION["level-score"], $_SESSION["total-score"], $_SESSION["salt"], $_SESSION["prev-salt"], $_SESSION["advance-level"])) {
     //Either just logged in or didnt log in.
 
     if (!isset($user)) {
@@ -229,6 +90,4 @@ if (isset($from)) {
     header("Location: ./profile.php");
     die();
 }
-
-return;
-
+?>
