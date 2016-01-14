@@ -1,4 +1,4 @@
-/*
+d/*
  * Copyright (C) 2014 radsaggi(ashutosh)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -22,14 +22,17 @@
 }
 body { 
     background: url("./images/cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background-size: 100%;
+    background-position: center;
 }
 .c { 
     clear: both; 
 }
 #wrapper { 
+    opacity: 0.9;
     margin: 0 auto; 
     padding: 0 40px 60px 40px; 
-    width: 960px; 
+    width: 1024px; 
 }
 h2 { 
     padding: 20px 0 10px 0; 
@@ -41,13 +44,13 @@ h2 {
 }
 
 .login {
-    background:
+   /* background:
         radial-gradient(black 15%, transparent 16%) 0 0,
         radial-gradient(black 15%, transparent 16%) 8px 8px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color:#282828;
-    background-size:16px 16px;
+    background-size:16px 16px;*/
 
     box-shadow: 0 0 10px 4px #222222;
     position:absolute;
@@ -62,7 +65,7 @@ h2 {
     text-align: center;
     font-weight: bold;
     font-size: 32px;
-    color: #00a1d2;
+    color: #222222;
     text-shadow: 0 0 2px #00a1d2;
     margin-top: 20px;
     letter-spacing: 1px;
@@ -121,7 +124,7 @@ h2 {
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
 }
 .login input[type=text]:focus, .login input[type=password]:focus {
-    color: white;
+    color: #054C7D;
     background: rgba(0, 0, 0, 0.1);
     outline: 0;
     box-shadow: 0 0 5px #00a1d2;
@@ -138,6 +141,7 @@ h2 {
     padding-right: 10px;
     font-weight: 100;
     text-align: right;
+    color: white;
     letter-spacing: 1px;
 }
 

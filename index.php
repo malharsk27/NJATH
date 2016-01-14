@@ -82,7 +82,7 @@ require './support/check.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NJATH - CELESTA 2015 - HOME</title>
+        <title>NJATH - ANWESHA 2016 - HOME</title>
         <link href="index.css" rel="stylesheet" type="text/css" />
         <link href="navbar.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -99,7 +99,7 @@ require './support/check.php';
             </a>
             <a href="leaderboard.php" >
                 <span>Leaderboard</span>
-                <span>View the Leaderboard</span>
+                <span>The Rulers</span>
             </a>
             <a href="http://www.facebook.com/iit.njath/app_202980683107053">
                 <span>Forum</span>
@@ -107,16 +107,16 @@ require './support/check.php';
             </a>
             <a href="http://www.iitp.ac.in">
                 <span>IIT Patna</span>
-                <span>All about our college</span>
+                <span>About our college</span>
             </a>
-            <!-- <a href="http://2014.anwesha.info">
-                <span>Anwesha 2014</span>
+            <a href="http://2014.anwesha.info">
+                <span>Anwesha 2016</span>
                 <span>The Anwesha website...</span>
-            </a> -->
-            <a href="https://www.facebook.com/CelestaIITP">
+            </a>
+            <!--a href="https://www.facebook.com/CelestaIITP">
                 <span>Celesta</span>
                 <span>Celesta 2015</span>
-            </a>
+            </a> -->
             <a href="rules.php">
                 <span>Rules</span>
                 <span>The law of the Land!!!</span>
@@ -172,18 +172,25 @@ require './support/check.php';
                 <div id="slider_container_2">
 
                     <div id="SliderName_2" class="SliderName_2">
-                        <img src="images/1.jpg" width="700" height="450" alt="Demo2 first" title="Demo2 first" usemap="#img1map" />
+                        <img src="images/1.jpg" width=100% height=100% alt="Demo2 first" title="Demo2 first" usemap="#img1map" />
                         <map name="img1map">
                             <area href="#img1map-area1" shape="rect" coords="100,100,200,200" />
                             <area href="#img1map-area2" shape="rect" coords="300,100,400,200" />
                         </map>
                         <div class="SliderName_2Description">IIT PATNA PRESENTS :: <strong> NJATH</strong></div>
-                        <img src="images/2.jpg" width="700" height="450" alt="Demo2 second" title="Demo2 second" />
+                        <img src="images/2.jpg" width="2000" height="450" alt="Demo2 second" title="Demo2 second" />
                         <div class="SliderName_2Description"><strong>NOT JUST ANOTHER TREASURE HUNT </strong></div>
-                        <img src="images/3.jpg" width="700" height="450" alt="Demo2 third" title="Demo2 third" />
+                        <img src="images/3.jpg" width="2000" height="450" alt="Demo2 third" title="Demo2 third" />
                         <div class="SliderName_2Description"><strong>COMPLETE LEVELS TO ADVANCE</strong> </div>
-                        <img src="images/4.jpg" width="700" height="450" alt="Demo2 fourth" title="Demo2 fourth" />
+                        <img src="images/4.jpg" width="2000" height="450" alt="Demo2 fourth" title="Demo2 fourth" />
                         <div class="SliderName_2Description"><strong>CHALLENGE YOURSELF TO THE FULLEST</strong></div>
+                        <img src="images/5.jpg" width="2000" height="450" alt="Demo2 fifth" title="Demo2 fifth" />
+                        <div class="SliderName_2Description"><strong>SEARCH FOR CLUES</strong> </div>
+                        <img src="images/6.jpg" width="2000" height="450" alt="Demo2 sixth" title="Demo2 sixth" />
+                        <div class="SliderName_2Description"><strong>STORM YOUR BRAIN</strong> </div>
+                        <img src="images/7.jpg" width="2000" height="450" alt="Demo2 seventh" title="Demo2 seventh" />
+                        <div class="SliderName_2Description"><strong>READ THE QUESTION CAREFULLY</strong> </div>
+                        
                     </div>
                     <div class="c"></div>
                     <div id="SliderNameNavigation_2"></div>
