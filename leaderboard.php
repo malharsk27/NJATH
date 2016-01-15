@@ -30,7 +30,7 @@ require_once './support/dbcon.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NJATH - CELESTA 2k15 Leaderboard</title>
+        <title>NJATH - ANWESHA 2k16 Leaderboard</title>
         <link href="leaderboard.css" rel="stylesheet" type="text/css" />
         <link href="navbar.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -70,9 +70,9 @@ require_once './support/dbcon.php';
                 <span>Anwesha 2014</span>
                 <span>The Anwesha website...</span>
             </a> -->
-            <a href="https://www.facebook.com/CelestaIITP">
-                <span>Celesta</span>
-                <span>Celesta 2015</span>
+            <a href="http://2014.anwesha.info">
+                <span>Anwesha</span>
+                <span>Anwesha 2016</span>
             </a>
             <a href="rules.php">
                 <span>Rules</span>

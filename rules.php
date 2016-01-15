@@ -28,7 +28,7 @@ require_once './support/check.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NJATH - CELESTA 2k15 - RULES</title>
+        <title>NJATH - ANWESHA 2k16 - RULES</title>
         <link href="rules.css" rel="stylesheet" type="text/css" />
         <link href="navbar.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
@@ -70,9 +70,9 @@ require_once './support/check.php';
                 <span>Anwesha 2014</span>
                 <span>The Anwesha website...</span>
             </a> -->
-            <a href="https://www.facebook.com/CelestaIITP">
-                <span>Celesta</span>
-                <span>Celesta 2015</span>
+            <a href="http://2014.anwesha.info">
+                <span>Anwesha</span>
+                <span>Anwesha 2016</span>
             </a>
             <a href="http://www.iitp.ac.in">
                 <span>IIT Patna</span>
