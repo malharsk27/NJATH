@@ -23,10 +23,6 @@ require_once 'function.php';
 require_once './support/check.php';
 // require_once './support/dbcon.php';
 
-function startsWith($haystack, $needle) {
-    return $needle === "" || strpos($haystack, $needle) === 0;
-}
-
 /*function check_hint($hint) {
     if ($hint != $_SESSION["prev-salt"] || $_SESSION["prev-salt"] === "") {
         return NULL;
@@ -188,7 +184,7 @@ function check_answer($ans) {
     die();
 }
 
-function check() {
+function check_question() {
     global $_POST;
     if (isset($_POST["answer"])) {
         return check_answer($_POST["answer"]);
@@ -199,7 +195,7 @@ function check() {
     }
 }
 
-$wrong_msg = check();
+$wrong_msg = check_question();
 unset($_POST);
 
 /*if (startsWith($_SESSION["question"], "75")) {

@@ -1,23 +1,23 @@
 <?php
 require_once './support/dbcon.php';
 session_start();
-// if (!isset($CONST)) {
+if (!isset($CONST)) {
 
-//     $CONST["advance"] = 6;
+    $CONST["advance"] = 6;
 
-//     $CONST["njath-home"] = "www.anwesha.info/njath/";
-//     global $db_connection;
-//     $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,1,1)) AS `C` FROM `Questions`";
-//     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
-//     $CONST["levels"] = $query["C"];
-//     $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,2,1)) AS `C` FROM `Questions`";
-//     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
-//     $CONST["questions"] = $query["C"];
-//     $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,3,1)) AS `C` FROM `Questions`";
-//     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
-//     $CONST["buffer"] = $query["C"];
+    $CONST["njath-home"] = "www.anwesha.info/njath/";
+    global $db_connection;
+    $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,1,1)) AS `C` FROM `Questions`";
+    $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+    $CONST["levels"] = $query["C"];
+    $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,2,1)) AS `C` FROM `Questions`";
+    $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+    $CONST["questions"] = $query["C"];
+    $query = "SELECT COUNT(DISTINCT SUBSTRING(`Question ID`,3,1)) AS `C` FROM `Questions`";
+    $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
+    $CONST["buffer"] = $query["C"];
 
-// }
+}
 // var_dump($_SESSION);
 // echo "<br>";
 // var_dump($_POST);
@@ -44,7 +44,7 @@ if (!isset($_SESSION["username"], $_SESSION["level"], $_SESSION["question"], $_S
     }
 
     //Just logged in   
-    $query = "SELECT * FROM `ContestantsData` WHERE `Username` = '{$user}'";
+    $query = "SELECT * FROM `ContestantsData` WHERE `username` = '{$user}'";
     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
     $_SESSION["username"] = $user;
     $_SESSION["level"] = $query["Level"];
