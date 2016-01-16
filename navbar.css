@@ -16,7 +16,8 @@
  */
 
 nav {
-    background-color:black;
+    background: linear-gradient(black,#7F3B32,#B05245);
+    opacity: 0.9;
     position:fixed;
     top:0em;
     left:0em;
@@ -32,7 +33,7 @@ nav a {
     display: inline-block;
     margin: 15px 0;
     outline: none;
-    color: #00c3ff;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -59,7 +60,7 @@ nav a:focus {
     left: 0;
     width: 100%;
     height: 1px;
-    background: #00a1d2;
+    background: linear-gradient(white,#B05245);
     content: '';
     opacity: 0.2;
     -webkit-transition: opacity 0.3s, height 0.3s;
@@ -70,7 +71,7 @@ nav a:focus {
 .cl-effect-9 a::after {
     top: 93%;
     opacity: 0;
-    box-shadow: 0 1px 3px #00a1d2;
+    box-shadow: 0 1px 3px red;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s;
