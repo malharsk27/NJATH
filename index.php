@@ -23,9 +23,9 @@ require_once 'function.php';
 // error_reporting(E_ALL);
 // ini_set("display_errors", 1);
 function checkLogin() {
-    if (!filter_var($_POST["login"], FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^[\w]+$/')))) {
+    if (!filter_var($_POST["login"], FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^[\w]{5,15}$/')))) {
         $error["msg"] = "Incorrect username";
-        $error["type"] = "username";
+        $error["type"] = "auth_failed";
         $error["error"] = TRUE;
         return $error;
     }
@@ -47,7 +47,7 @@ function checkLogin() {
     $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
    //mysqli_close($db_connection);
     if (!isset($query["password"])) {
-        $error["type"] = "username";
+        $error["type"] = "auth_failed";
         $error["error"] = TRUE;
         return $error;
     }
@@ -55,7 +55,7 @@ function checkLogin() {
     $hash = sha1($pass);
 
     if ($hash != $query["password"]) {
-        $error["type"] = "passwords";
+        $error["type"] = "auth_failed";
         $error["error"] = TRUE;
         return $error;
     }
@@ -143,18 +143,10 @@ require './support/check.php';
 
                 <?php
                 if (isset($error) && $error["error"]) {
-                    if ($error["type"] === "username") {
+                    if ($error["type"] === "auth_failed") {
                         ?>
-                        <p class = "error-display">Wrong username. New user? Register  <a href = "register.php">here</a>.</p>
+                        <p class = "error-display">Authentication failed. You entered an incorrect username or password. New User?<a href = "register.php">Register here</a> or Forgot Password? Send a mail to <a href = "mailto:sunny.cs13@iitp.ac.in">NJATH</a>.</p>
                         <?php 
-                    } else if ($error["type"] === "password") {
-                        ?>
-                        <p class = "error-display">Wrong password. Forgot Password? Send a mail to <a href = "mailto:sunny.cs13@iitp.ac.in">sunny.cs13</a>.</p>
-                        <?php
-                    } else if ($error["type"] === "verification") {
-                        ?>
-                        <p class = "error-display">Account not verified yet. check your registered account for verification email. Send a mail to <a href = "mailto:sunny.cs13@iitp.ac.in">sunny.cs13</a>.</p>
-                        <?php
                     }
                 }
                 ?>

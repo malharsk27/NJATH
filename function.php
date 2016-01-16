@@ -7,17 +7,46 @@ function endsWith($haystack, $needle) {
     return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
 }
 
-//Verify Anwesha Id
-function verify_anw_id($id,$pass) {
+/**
+ * this function gives response after submitting some data to any URl.
+ * Used here for the response of the anwesha login page
+ */
+function do_post_request($url, $data, $optional_headers = null){
+    $params = array('http' => array(
+                    'method' => 'POST',
+                    'content' => $data
+                ));
+    $ctx = stream_context_create($params);
+    $fp = @fopen($url, 'rb', false, $ctx);
+    if (!$fp)
+    {
+        throw new Exception("Problem with $url, $php_errormsg");
+    }
+    $response='';
+    while (!feof($fp))
+    {
+        $response = $response.fgets($fp);
+    }
+    if ($response === false)
+    {
+        throw new Exception("Problem reading data from $url, $php_errormsg");
+    }
+
+    fclose($fp);
+    return $response;
+}
+
+/**
+ * Returns false if username already exists
+ */
+function checkUsername($user) {
     require_once "./support/dbcon.php";
     global $db_connection;
-    
-    //anwesha_id and password already verified in database through anwesha website
-    $query = "SELECT COUNT(*) FROM `Contestants` WHERE `pId` = '$id' AND `password` = '$pass'; ";
+    $query = "SELECT COUNT(*) FROM `Contestants` WHERE `username` = '$user'";
     // var_dump($query);   
     $res2 = mysqli_fetch_assoc(mysqli_query($db_connection,$query));
     mysqli_close($db_connection);
-    return intval($res2["COUNT(*)"]) == 1;
+    return intval($res2["COUNT(*)"]) == 0;
 }
 
 function check() {
@@ -25,38 +54,51 @@ function check() {
     global $CONST;
     $user = $_POST["usernamesignup"];
     $anw = $_POST["anweshasignup"];
-    // $anw = intval(substr($anw, 3));
     $pass = $_POST["passwordsignup"];
-    $hash = sha1($pass);
 
-    if (!filter_var($user, FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^(\w){1,15}$/')))) {
-        $error["msg"] = "Inappropriate username";
-        $error["component"] = "username";
-        return;
-    }
-    if (preg_match('/ANW[0-9]{4}/', $anw)) {
-        $anw = intval(substr($anw, 3));
-    } else {
-        $error["msg"] = "Inappropriate id";
-        $error["component"] = "anwesha";
-        return;
-    }
-    if (!verify_anw_id($anw, $hash)) {
-        $error["msg"] = "Inappropriate Anwesha ID and password.";
-        $error["component"] = "anwesha";
-        return;
-    }
-
+    /**
+     * validating captcha
+     */
     if(empty($_SESSION['6_letters_code'] ) || $_SESSION['6_letters_code'] != $_POST['6_letters_code']){
-    //Note: the captcha code is compared case insensitively.
-    //if you want case sensitive match, update the check above to
-
         $error["msg"] = "The captcha code does not match!";
         $error["component"] = "captcha";
         return;
     }
 
+    /**
+     * getting the status of login in anwesha website
+     */
+    $url = 'http://2016.anwesha.info/login/';
+    $data = array ('username' => $anw,'password' => $pass);
+    $data = http_build_query($data);
+    $reply = do_post_request($url, $data);
+    $res = (array)json_decode($reply);
+
+    /**
+     * getting the login status
+     */
+    if (!$res['status']){
+        $error["msg"] = "Authentication failed. You entered an incorrect Anwesha ID or password.";
+        $error["component"] = "anwesha";
+        return;
+    }
+    
+    $hash = sha1($pass);
+
+    if (!checkUsername($user)){
+        $error["msg"] = "Username already taken.";
+        $error["component"] = "username";
+        return;
+    }
+
+    if (!filter_var($user, FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^[\w]{5,15}$/')))) {
+        $error["msg"] = "Inappropriate username (5 to 15 character needed)";
+        $error["component"] = "username";
+        return;
+    }
+    // var_dump($CONT);
 }
+
 if (!function_exists("destroy_session")) {
 
     function destroy_session() {
