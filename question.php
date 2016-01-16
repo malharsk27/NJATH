@@ -237,13 +237,10 @@ $question = mysqli_fetch_array(mysqli_query($db_connection, $query));
                 <span>Forum</span>
                 <span>The Discussion Forum</span>
             </a>
-            <!-- <a href="http://2014.anwesha.info">
-                <span>Anwesha 2014</span>
-                <span>The Anwesha website...</span>
-            </a> -->
-            <a href="https://www.facebook.com/CelestaIITP">
-                <span>Celesta</span>
-                <span>Celesta 2015</span>
+            
+            <a href="www.anwesha.info">
+                <span>Anwesha</span>
+                <span>Anwesha 2015</span>
             </a>
             
             <a href="./logout.php">

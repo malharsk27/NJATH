@@ -121,7 +121,7 @@ if (isset($_POST["usernamesignup"]) && isset($_POST["emailsignup"]) &&
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href="navbar.css" type="text/css" rel="stylesheet" />
         <link href="register.css" type="text/css" rel="stylesheet" />
-        <title>NJATH - Celesta 2k13 Registration</title>
+        <title>NJATH - Anwesha 2k16 Registration</title>
     </head>
     <body>
         <nav class="cl-effect-9">

@@ -23,7 +23,8 @@
     outline: none; 
 }
 body { 
-    background: url("./images/cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background: url("./images/pro_cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background-position: absolute;
 }
 
 #user-info {
@@ -76,6 +77,7 @@ body {
     position: relative;
     height: 25em;
     margin: 5em auto;
+    opacity: 0.9;
 }
 #question-div.question-both {
     width: 80em;
@@ -88,7 +90,7 @@ body {
     width: 40em;
     height: 25em;
     right: 0;
-    top: 0;
+    top: 1em;
 }
 #question-div img#cropped {
     clip: rect(0, auto, 25em, 0);
@@ -98,13 +100,9 @@ body {
 #question-div #question-text {
     position: absolute;
     left: 0;
-    top: 2em;
+    top: 1em;
     text-align: center;
-    background:
-        radial-gradient(#bbb 15%, transparent 16%) 0 0,
-        radial-gradient(#bbb 15%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    
     background-color:#d3d3d3;
     background-size:16px 16px;
     border-radius: 5px;
@@ -113,7 +111,7 @@ body {
 }
 #question-div #question-text h2 {
     width: 23em;
-    height: 12em;
+    height: 16em;
 }
 
 @keyframes riseup {
@@ -133,17 +131,18 @@ body {
     100%{ bottom: 0; }
 }
 #form-wrapper {
+    opacity: 0.9;
     position: fixed;
-    bottom: -150px;
+    bottom: -130px;
     width: 50em;
     left: 16em;
-    padding: 2em;
+    padding: em;
     padding-bottom: 1.2em;
-    background-color: #3a7ccb;
+    background-color: #D75451;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border: 1px solid #000;
-    box-shadow: 0 -5px 15px #000, 0 15px 20px 6px #1e4675 inset;
+    
+    box-shadow: 0 -5px 15px #000, 0 15px 20px 6px #992E2C inset;
     -webkit-animation: riseup 2s ease-out 1s 1 normal;
     -moz-animation: riseup 2s ease-out 1s 1 normal;
     -ms-animation: riseup 2s ease-out 1s 1 normal;
@@ -201,6 +200,9 @@ body {
 
 #form-wrapper #ans {
     display: block;
+    position: absolute;
+    left: 6em;
+    top: 2em;
     padding: 5px;
     border: 1px solid #DDD;
     background: -moz-linear-gradient(center bottom , #fff,  #ccc 1px, #fff 20px);    
@@ -227,25 +229,28 @@ body {
 }
 #form-wrapper #submit-btn{
     font-family: "Vanthian";
-    background: #80a9da;
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(#80a9da,0),color-stop(#6f97c5,1));
-    background: -webkit-linear-gradient(top, #80a9da 0%, #6f97c5 100%);
-    background: -moz-linear-gradient(top, #80a9da 0%, #6f97c5 100%);
-    background: -o-linear-gradient(top, #80a9da 0%, #6f97c5 100%);
-    background: linear-gradient(top, #80a9da 0%, #6f97c5 100%);
+    opacity: 0.8;
+    position: absolute;
+    left: 9em;
+    background: #FE9F9D;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(#752E2E,0),color-stop(#E39BA4,1));
+    background: -webkit-linear-gradient(top, #752E2E 0%, #E39BA4 100%);
+    background: -moz-linear-gradient(top, #752E2E 0%, #E39BA4 100%);
+    background: -o-linear-gradient(top, #752E2E 0%, #E39BA4 100%);
+    background: linear-gradient(top, #752E2E 0%, #E39BA4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80a9da', endColorstr='#6f97c5',GradientType=0 );
     padding-left: 22px;
     padding-right: 80px;
     height: 38px;
     display: block;
     position: relative;
-    border: 1px solid #5d81ab;
+    border: 1px solid #E16E6D;
     -webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
     -moz-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
     box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
     float: left;
     clear: both;
     margin: 1em 0 0 20em;
@@ -255,6 +260,7 @@ body {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     text-decoration: none;
+
 }
 #form-wrapper #submit-btn .btn-text{
     padding-top: 10px;
@@ -264,7 +270,7 @@ body {
     text-transform:uppercase;
     white-space: nowrap;
     text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
-    color: #446388;
+    color: #CFCFCF;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;

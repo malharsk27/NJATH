@@ -9,7 +9,7 @@ require_once './support/check.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NJATH - Celesta 2k13 - RULES</title>
+        <title>NJATH - Anwesha 2k16 - RULES</title>
         <link href="rules.css" rel="stylesheet" type="text/css" />
         <link href="navbar.css" rel="stylesheet" type="text/css" />
         <style type="text/css">

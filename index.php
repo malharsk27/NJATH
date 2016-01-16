@@ -113,10 +113,7 @@ require './support/check.php';
                 <span>Anwesha 2016</span>
                 <span>The Anwesha website...</span>
             </a>
-            <!--a href="https://www.facebook.com/CelestaIITP">
-                <span>Celesta</span>
-                <span>Celesta 2015</span>
-            </a> -->
+          
             <a href="rules.php">
                 <span>Rules</span>
                 <span>The law of the Land!!!</span>

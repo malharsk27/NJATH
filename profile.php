@@ -148,9 +148,9 @@ unset($_POST);
                 <span>Anwesha 2014</span>
                 <span>The Anwesha website...</span>
             </a> -->
-            <a href="https://www.facebook.com/CelestaIITP">
-                <span>Celesta</span>
-                <span>Celesta 2015</span>
+            <a href="https://www.anwesha.info">
+                <span>Anwesha</span>
+                <span>Anwesha 2016</span>
             </a>
             <a href="./logout.php">
                 <span>Logout</span>
