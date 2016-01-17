@@ -23,17 +23,17 @@ d/*
 body { 
     background: url("./images/cover.jpg") repeat scroll center center rgb(100, 91, 92);
     background-size: 100%;
-    background-position: center;
+    background-position: top;
 }
 .c { 
     clear: both; 
 }
 #wrapper { 
-    opacity: 0.9;
     margin: 0 auto; 
     padding: 0 40px 60px 40px; 
     width: 1024px; 
-}
+
+    }
 h2 { 
     padding: 20px 0 10px 0; 
     font-size: 24px; 
@@ -44,22 +44,23 @@ h2 {
 }
 
 .login {
-    background:
-        opacity:0.5;
+    /*background:
         radial-gradient(black 15%,transparent 90%) 0 0,
         radial-gradient(black 15%, transparent 90%) 8px 8px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 90%) 0 1px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 90%) 8px 9px;
-    
+    */
     background-size:16px 16px;
 
-    box-shadow: 0 0 10px 4px #222222;
+    box-shadow: 0 0 5px 2px #222222;
     position:absolute;
     top:8.6em;
     left:62em;
     font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height:25em;
     width:31em;
+    background-color: #bfbebe;
+    opacity: 0.9;
 
 }
 

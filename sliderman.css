@@ -18,7 +18,8 @@
 
 
 #slider_container_2 
-{ 
+{   
+    opacity: 0.9;   
     float: left;
     margin: 0 auto;
     padding: 15px;
