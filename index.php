@@ -171,8 +171,6 @@ require './support/check.php';
                         <div class="SliderName_2Description"><strong>NOT JUST ANOTHER TREASURE HUNT </strong></div>
                         <img src="images/3.jpg" width="2000" height="450" alt="Demo2 third" title="Demo2 third" />
                         <div class="SliderName_2Description"><strong>COMPLETE LEVELS TO ADVANCE</strong> </div>
-                        <img src="images/4.jpg" width="2000" height="450" alt="Demo2 fourth" title="Demo2 fourth" />
-                        <div class="SliderName_2Description"><strong>CHALLENGE YOURSELF TO THE FULLEST</strong></div>
                         <img src="images/5.jpg" width="2000" height="450" alt="Demo2 fifth" title="Demo2 fifth" />
                         <div class="SliderName_2Description"><strong>SEARCH FOR CLUES</strong> </div>
                         <img src="images/6.jpg" width="2000" height="450" alt="Demo2 sixth" title="Demo2 sixth" />
