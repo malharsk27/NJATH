@@ -69,7 +69,7 @@ function check() {
      * getting the status of login in anwesha website
      */
     $url = 'http://2016.anwesha.info/login/';
-    $data = array ('username' => 'ANW8704','password' => 'sunny424');
+    $data = array ('username' => $anw,'password' => $pass);
     $data = http_build_query($data);
     $reply = do_post_request($url, $data);
     $res = (array)json_decode($reply);
@@ -118,8 +118,8 @@ if (!function_exists("push_increase")) {
         $n = count($_SESSION["increase"]);
         $_SESSION["increase"][$n]["text"] = $text;
         $_SESSION["increase"][$n]["value"] = $value;
-	
-	if ($both) {
+    
+    if ($both) {
             $_SESSION["level-score"] += $value;
         }
         $_SESSION["total-score"] += $value;
