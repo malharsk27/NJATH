@@ -118,8 +118,8 @@ if (!function_exists("push_increase")) {
         $n = count($_SESSION["increase"]);
         $_SESSION["increase"][$n]["text"] = $text;
         $_SESSION["increase"][$n]["value"] = $value;
-	
-	if ($both) {
+    
+    if ($both) {
             $_SESSION["level-score"] += $value;
         }
         $_SESSION["total-score"] += $value;
