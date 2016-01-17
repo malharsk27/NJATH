@@ -1,6 +1,7 @@
 <?php
 $from = "registerpage";
 require_once 'function.php';
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     session_start();
     check();
@@ -9,9 +10,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         require 'signupPage.html';
         die();
     }
+    global $db_connection;
     $db_username = "root";
     $db_password = "";
-    $db_connection = mysqli_connect("localhost", $db_username, $db_password, "anwesha_njath");
+    $db_connection = mysqli_connect("localhost", $db_username, $db_password, "anwesha_njath");  
     $user = $_POST["usernamesignup"];
     $anw = $_POST["anweshasignup"];
     $anw = intval(substr($anw, 3));
