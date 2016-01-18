@@ -370,21 +370,22 @@ body {
     width: 500px;
     margin: 100px auto;
     padding: 50px;
-    background:
+    /*background:
         radial-gradient(black 15%, transparent 16%) 0 0,
         radial-gradient(black 15%, transparent 16%) 8px 8px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;*/
+    background-color:white;
     background-size:16px 16px;
-    border-radius: 15px;
-    border: 2px solid #fff;
+    border-radius: 10px;
+    border: 0.5px solid #fff;
     box-shadow: 0 0 15px 2px #ddd;
+    opacity: 0.7;
 }
 
 #complete-hide #message-display h2 {
     text-align: center;
-    color: #a81a1a;
+    color: black;
 }
 
 @keyframes vanish {

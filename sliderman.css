@@ -18,7 +18,8 @@
 
 
 #slider_container_2 
-{ 
+{   
+    opacity: 0.9;   
     float: left;
     margin: 0 auto;
     padding: 15px;
@@ -26,12 +27,12 @@
     position:absolute; 
     top:60px; 
     left:10px; 
-    background: url("/img/bg.png") no-repeat 0 0;
+    background: url("/images/bg1.png") no-repeat 0 0;
     border-radius:10px;
 }
 
 #slider_container_2 img{
-    border-radius:10px;
+    /*border-radius:10px;*/
 }
 
 .SliderName_2 {
@@ -87,10 +88,12 @@
 
 #SliderNameNavigation_2 a img
 {
+    padding-right: 5px;
     border: none;
-    width: 16px;
-    height: 16px;
-    background: url("img/bullet.png") no-repeat center center;
+    width: 10px;
+
+    height: 10px;
+    background: url("images/bg1.png") no-repeat center center;
 }
 
 #SliderNameNavigation_2 a.active img

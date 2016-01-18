@@ -167,12 +167,10 @@ require './support/check.php';
                             <area href="#img1map-area2" shape="rect" coords="300,100,400,200" />
                         </map>
                         <div class="SliderName_2Description">IIT PATNA PRESENTS :: <strong> NJATH</strong></div>
-                        <img src="images/2.jpg" width="2000" height="450" alt="Demo2 second" title="Demo2 second" />
+                        <img src="images/2.jpg" width=2000" height="450" alt="Demo2 second" title="Demo2 second" />
                         <div class="SliderName_2Description"><strong>NOT JUST ANOTHER TREASURE HUNT </strong></div>
                         <img src="images/3.jpg" width="2000" height="450" alt="Demo2 third" title="Demo2 third" />
                         <div class="SliderName_2Description"><strong>COMPLETE LEVELS TO ADVANCE</strong> </div>
-                        <img src="images/4.jpg" width="2000" height="450" alt="Demo2 fourth" title="Demo2 fourth" />
-                        <div class="SliderName_2Description"><strong>CHALLENGE YOURSELF TO THE FULLEST</strong></div>
                         <img src="images/5.jpg" width="2000" height="450" alt="Demo2 fifth" title="Demo2 fifth" />
                         <div class="SliderName_2Description"><strong>SEARCH FOR CLUES</strong> </div>
                         <img src="images/6.jpg" width="2000" height="450" alt="Demo2 sixth" title="Demo2 sixth" />
