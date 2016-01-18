@@ -109,7 +109,7 @@ require './support/check.php';
                 <span>IIT Patna</span>
                 <span>About our college</span>
             </a>
-            <a href="http://2014.anwesha.info">
+            <a href="http://2016.anwesha.info">
                 <span>Anwesha 2016</span>
                 <span>The Anwesha website...</span>
             </a>

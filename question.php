@@ -154,7 +154,7 @@ $question = mysqli_fetch_array(mysqli_query($db_connection, $query));
             
             <a href="www.anwesha.info">
                 <span>Anwesha</span>
-                <span>Anwesha 2015</span>
+                <span>Anwesha 2016</span>
             </a>
             
             <a href="./logout.php">
@@ -329,5 +329,6 @@ $question = mysqli_fetch_array(mysqli_query($db_connection, $query));
             unset($wrong_msg);
         }
         ?>
+        <!-- My Sword is Here; http://www.imdb.com/title/tt0944947/trivia -->
     </body>
 </html>  

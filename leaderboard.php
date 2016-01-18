@@ -66,11 +66,7 @@ require_once './support/dbcon.php';
                 <span>IIT Patna</span>
                 <span>All about our college</span>
             </a>
-            <!-- <a href="http://2014.anwesha.info">
-                <span>Anwesha 2014</span>
-                <span>The Anwesha website...</span>
-            </a> -->
-            <a href="http://2014.anwesha.info">
+            <a href="http://2016.anwesha.info">
                 <span>Anwesha</span>
                 <span>Anwesha 2016</span>
             </a>
@@ -98,7 +94,8 @@ require_once './support/dbcon.php';
                         . "WHERE `C`.`Disqualified` = 0 "
                         . "ORDER BY `Total Score` DESC LIMIT 0, 20";
                 $result = mysqli_query($db_connection, $query);
-                
+                // var_dump($db_connection);
+                // die();
                 $count = 1;
                 $shown = 0;
                 $user = "";
