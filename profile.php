@@ -144,11 +144,7 @@ unset($_POST);
                 <span>IIT Patna</span>
                 <span>All about our college</span>
             </a>
-            <!-- <a href="http://2014.anwesha.info">
-                <span>Anwesha 2014</span>
-                <span>The Anwesha website...</span>
-            </a> -->
-            <a href="https://www.anwesha.info">
+            <a href="http://2016.anwesha.info">
                 <span>Anwesha</span>
                 <span>Anwesha 2016</span>
             </a>

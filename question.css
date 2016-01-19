@@ -43,14 +43,14 @@ body {
     border: 0.2em solid rgba(0,0,0,.32);
     text-align: center;
     font: italic bold 1em/2em Georgia, Serif;
-    color: #222;
+    color: #F6F4F4;
     border-radius: 1.5em;
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     -ms-transition: all .2s ease-out;
-    background: rgb(224, 45, 45);
+    background: #F00;
     -webkit-animation: throb 1.5s ease-in-out infinite alternate;
     animation: throb 1.5s ease-in-out infinite alternate;
 }

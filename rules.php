@@ -42,7 +42,7 @@ require_once './support/check.php';
                 ?>
                 <a href="./profile.php" >
                     <span>Questions</span>
-                    <span>Continue the HUNT!</span>
+                    <span>Resume the HUNT!</span>
                 </a>
                 <?php
             } else {
@@ -53,7 +53,7 @@ require_once './support/check.php';
                 </a>
                 <a href="register.php">
                     <span>Register</span>
-                    <span>New to the challenge?</span>
+                    <span>New to the challenge ?</span>
                 </a>
                 <?php
             }
@@ -66,13 +66,9 @@ require_once './support/check.php';
                 <span>Forum</span>
                 <span>The Discussion Forum</span>
             </a>
-            <!-- <a href="http://2014.anwesha.info">
-                <span>Anwesha 2014</span>
-                <span>The Anwesha website...</span>
-            </a> -->
-            <a href="http://2014.anwesha.info">
+            <a href="http://2016.anwesha.info">
                 <span>Anwesha</span>
-                <span>Anwesha 2016</span>
+                <span>Anwesha 2k16</span>
             </a>
             <a href="http://www.iitp.ac.in">
                 <span>IIT Patna</span>
@@ -83,23 +79,24 @@ require_once './support/check.php';
             <h2>Rules for the contest</h2>
 
             <ol id="rules-list">
-                <li> <p> NJATH is an online treasure-hunt contest conducted during Celesta. You will be given questions, and you have to decipher the solution. Be careful with spellings and answers to questions. </p> </li> 
-                <li> <p> Look out for clues and hints anywhere and everywhere including the URL of the page, the page source and all the details provided in the question. You can use Google, Wikipedia or anything else for help. </p> </li> 
-                <li> <p> Only answers as alpha-numeric characters in lower case (a-z, 0-9) are allowed. Eg. Suppose your answer is “I Love NJATH”, then write it as “ilovenjath”. In case of dates like 31st Jan 2014, write 31012014. </p> </li> 
-                <li> <p> Use IIT Patna email id only while registration. Otherwise you will not be considered.</p> </li>
-                <li> <p> Discussion forum can be used for getting hints. </p> </li> 
-                <li> <p> Users providing answers or direct link in any form through any medium will be disqualified. </p> </li> 
-                <li> <p> There are 6 levels in the hunt. Each level contains 8 questions of which at least  6 need to be answered to advance to the next level. </p> </li> 
-                <li> <p> The remaining 2 questions serve as bonus questions. Bonus questions provide more points than ordinary questions of that level.  </p> </li> 
+                <li> <p> NJATH is an online treasure-hunt contest conducted during Anwesha. You will be given questions, and you have to decipher the solution. Be careful with spellings and answers to questions. </p> </li> 
+                <li> <p> Look out for clues and hints everywhere including the URL of the page, the page source and all the details provided in the question. You can use Google, Wikipedia or anything else for help. </p> </li> 
+                <li> <p> Only answers as alpha-numeric characters in lower case (a-z, 0-9) are allowed. e.g. Suppose your answer is “I Love NJATH”, then write it as “ilovenjath”. In case of dates like 31st Jan 2016, write 31012016. </p> </li> 
+                <li> <p> Use Anwesha ID and password only while registering.</p> </li>
+                <li> <p> Stay tuned on the Discussion forum on our FB page for getting hints. </p> </li> 
+                <li> <p> Users providing answers or direct link in any form through any medium will be disqualified. </p> </li>
+				<li> <p> There is a Total Score which denotes the players game score so far. There is also a Level Score which will be used for opening questions. </p> </li>
+				<li> <p> Opening a question reduces Level Score. No more questions can be opened once the level score drops to zero. Solving questions increments Total Score as well as Level Score. </p> </li>
+                <li> <p> There are 6 levels in the hunt. Each level contains 8 questions of which at least 6 need to be answered to advance to the next level. </p> </li> 
+                <li> <p> The remaining 2 questions serve as bonus questions. Bonus questions provide more points than ordinary questions of that level.</p> </li> 
                 <li> <p> Your profile page will contain a list of all questions at the current level, each highlighted differently - unopened in blue, opened in yellow and solved in green. </p> </li> 
-                <li> <p> Each question tag also contains information about scoring system: </p></li> 
-                
+                <li> <p> Each question tag also contains information about scoring system. </p></li> 
+                <li> <p> Once you advance to the next level, you can't go back. </p></li> 
                 <li> <p> Bonus questions if opened have to be solved in order to move to the next level, otherwise a heavy penalty will be imposed on the score. </p> </li> 
                 <li> <p> Each player starts off with a score of 40x(level no.), in each level. You will be awarded scores for correct answers.  </p> </li> 
                 <li> <p> You will have to pay score costs for opening questions, which will be deducted from level score and not from total score so choose wisely! The level score at no point of time can fall below zero! </p> </li> 
-                <li> <p> The player who has the maximum points at the end of 40hrs is the winner. </p></li>
+                <li> <p> The player who has the maximum points at the end is the Winner. </p></li>
                 
-                <li> <p> Event starts from 17:00 hrs Thursday i.e 8th Oct 15 and finishes at 09:00 hrs Saturday i.e 10th Oct 15.</p> </li>
 
                         </ol>
                         </div>

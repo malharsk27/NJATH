@@ -52,6 +52,13 @@ function checkUsername($user) {
 function check() {
     global $error;
     global $CONST;
+    if(isset($_POST["usernamesignup"]) && isset($_POST["anweshasignup"]) && isset($_POST["passwordsignup"]) && isset($_POST['6_letters_code'])){
+
+    } else {
+        $error["msg"] = 'Incomplete request';
+        $error['component'] = 'username';
+        return;
+    }
     $user = $_POST["usernamesignup"];
     $anw = $_POST["anweshasignup"];
     $pass = $_POST["passwordsignup"];
@@ -92,7 +99,7 @@ function check() {
     }
 
     if (!filter_var($user, FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^[\w]{5,15}$/')))) {
-        $error["msg"] = "Inappropriate username (5 to 15 character needed)";
+        $error["msg"] = "Inappropriate username (5 to 15 alphanumeric characters needed)";
         $error["component"] = "username";
         return;
     }
