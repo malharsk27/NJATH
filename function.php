@@ -92,7 +92,7 @@ function check() {
     }
 
     if (!filter_var($user, FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^[\w]{5,15}$/')))) {
-        $error["msg"] = "Inappropriate username (5 to 15 character needed)";
+        $error["msg"] = "Inappropriate username (5 to 15 alphanumeric characters needed)";
         $error["component"] = "username";
         return;
     }
