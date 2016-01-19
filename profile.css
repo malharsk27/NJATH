@@ -27,6 +27,7 @@
 
 body { 
     background: url("./images/pro_cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background-position: absolute;
     min-width: 1200px;
     overflow: auto;
 }
@@ -378,7 +379,7 @@ body {
 }
 
 #button-wrapper .a-btn.opened {
-    background-color:#F27866;
+    background-color:#E58452;
 }
 #button-wrapper .a-btn.opened .a-btn-text {
     color: white;
