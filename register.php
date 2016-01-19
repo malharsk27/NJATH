@@ -25,10 +25,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $query = "INSERT INTO `Contestants`(`username`, `pId`, `password`, `Disqualified`) VALUES ('$user', $anw, '$hash', 0);";
     // var_dump($query); die();
     $res= mysqli_query($db_connection,$query);
-    // $result = mysqli_fetch_assoc($res);
     if (!$res) {
-        // var_dump($query . '  --  1'); die();
-        $error["msg"] = "Some error Occurred";
+        $error["msg"] = "Anwesha id has been already registered.";
         $error["component"] = "Contestants";
     }
 
