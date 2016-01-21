@@ -76,9 +76,6 @@ require_once './support/dbcon.php';
             </a>
         </nav>
 
-
-        <div id="hn">Leader Board</div>
-
         <div id="table">
             <table class="data-table">
                 <thead>
@@ -115,7 +112,6 @@ require_once './support/dbcon.php';
                     <tr <?php if ($user) echo 'class="user"' ?>>
                         <td><?php echo($count); ?></td>
                         <td><?php echo($row["Username"]); ?></td>
-                        <!-- <td><?php echo($row["College"]); ?></td> -->
                         <td><?php echo($row["Total Score"]); ?></td>
                     </tr>
                     <?php

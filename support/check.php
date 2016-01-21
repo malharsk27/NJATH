@@ -65,7 +65,7 @@ if (!isset($_SESSION["username"], $_SESSION["level"], $_SESSION["question"], $_S
 load_constants();
 
 $_SESSION["prev-salt"] = $_SESSION["salt"];
-$_SESSION["salt"] = sha1(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM));
+$_SESSION["salt"] = sha1("arindam");
 
 // $query = "SELECT `Disqualified` FROM `Contestants` WHERE `username` = '{$_SESSION["username"]}'";
 // $query = mysqli_fetch_array(mysqli_query($db_connection, $query));
