@@ -28,7 +28,7 @@ require_once './support/check.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NJATH - ANWESHA 2k16 - RULES</title>
+        <title>NJATH - ANWESHA 2k17 - RULES</title>
         <link href="rules.css" rel="stylesheet" type="text/css" />
         <link href="navbar.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
@@ -62,13 +62,13 @@ require_once './support/check.php';
                 <span>Leaderboard</span>
                 <span>View the Leaderboard</span>
             </a>
-            <a href="http://www.facebook.com/iit.njath/app_202980683107053">
+            <a href="https://apps.facebook.com/forumforpages/464686653559952/61cb4cc2-6449-4990-a445-9653c65ce60c/0">
                 <span>Forum</span>
                 <span>The Discussion Forum</span>
             </a>
-            <a href="http://2016.anwesha.info">
+            <a href="http://2017.anwesha.info">
                 <span>Anwesha</span>
-                <span>Anwesha 2k16</span>
+                <span>Anwesha 2k17</span>
             </a>
             <a href="http://www.iitp.ac.in">
                 <span>IIT Patna</span>
