@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-$db_username = "root";
-$db_password = "";
+$db_username = "njath";
+$db_password = "1ef3XS9cyY5Z3baD";
 if (!isset($db_connection)) {
 
     if (!function_exists("db_disconnect")) {
@@ -32,7 +32,7 @@ if (!isset($db_connection)) {
     }
 
     global $db_connection;
-    $db_connection = mysqli_connect("localhost", $db_username, $db_password, "anwesha_njath");
+    $db_connection = mysqli_connect("localhost", $db_username, $db_password, "njath");
     // Check connection
     if (mysqli_connect_errno()) {
         throw new Exception("Failed to connect to MySQL: " . mysqli_connect_error());
