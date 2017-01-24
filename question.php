@@ -147,14 +147,14 @@ $question = mysqli_fetch_array(mysqli_query($db_connection, $query));
                 <span>Leaderboard</span>
                 <span>View the Leaderboard</span>
             </a>
-            <a href="http://www.facebook.com/iit.njath/app_202980683107053">
+            <a href="https://apps.facebook.com/forumforpages/464686653559952/61cb4cc2-6449-4990-a445-9653c65ce60c/0">
                 <span>Forum</span>
                 <span>The Discussion Forum</span>
             </a>
             
             <a href="www.anwesha.info">
                 <span>Anwesha</span>
-                <span>Anwesha 2016</span>
+                <span>Anwesha 2017</span>
             </a>
             
             <a href="./logout.php">
@@ -290,7 +290,8 @@ $question = mysqli_fetch_array(mysqli_query($db_connection, $query));
                             $msg[2] = "Double check!!";
                             $msg[3] = "Easy, aint it?";
                             $msg[4] = "Very peculiar!";
-                            $idx = rand(0, 4);
+                            $msg[5] = "Is that sweat?";
+                            $idx = rand(0, 5);
                             echo $msg[$idx];
                             ?></span>
                         <span class="btn-icon-right"><span></span></span></span>
