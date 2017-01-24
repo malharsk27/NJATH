@@ -75,7 +75,7 @@ function check() {
     /**
      * getting the status of login in anwesha website
      */
-    $url = 'http://2016.anwesha.info/login/';
+    $url = 'http://2017.anwesha.info/login/';
     $data = array ('username' => $anw,'password' => $pass);
     $data = http_build_query($data);
     $reply = do_post_request($url, $data);
