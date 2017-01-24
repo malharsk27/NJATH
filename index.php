@@ -82,7 +82,7 @@ require './support/check.php';
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NJATH - ANWESHA 2016 - HOME</title>
+        <title>NJATH - ANWESHA 2017 - HOME</title>
         <link href="index.css" rel="stylesheet" type="text/css" />
         <link href="navbar.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -109,9 +109,9 @@ require './support/check.php';
                 <span>IIT Patna</span>
                 <span>About our college</span>
             </a>
-            <a href="http://2016.anwesha.info">
-                <span>Anwesha 2016</span>
-                <span>The Anwesha website...</span>
+            <a href="http://2017.anwesha.info">
+                <span>Anwesha 2017</span>
+                <span>The Eastern Sails</span>
             </a>
           
             <a href="rules.php">
@@ -142,7 +142,7 @@ require './support/check.php';
                 if (isset($error) && $error["error"]) {
                     if ($error["type"] === "auth_failed") {
                         ?>
-                        <p class = "error-display">Authentication failed. You entered an incorrect username or password. New User?<a href = "register.php">Register here</a> or Forgot Password? Send a mail to <a href = "mailto:sunny.cs13@iitp.ac.in">NJATH</a>.</p>
+                        <p class = "error-display">Authentication failed. You entered an incorrect username or password. New User?<a href = "register.php">Register here</a> or Forgot Password? Send a mail to <a href = "mailto:kulkarni.cs15@iitp.ac.in">NJATH</a>.</p>
                         <?php 
                     }
                 }
