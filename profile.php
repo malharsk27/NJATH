@@ -136,7 +136,7 @@ unset($_POST);
                 <span>Leaderboard</span>
                 <span>View the Leaderboard</span>
             </a>
-            <a href="http://www.facebook.com/iit.njath/app_202980683107053">
+            <a href="https://apps.facebook.com/forumforpages/464686653559952/61cb4cc2-6449-4990-a445-9653c65ce60c/0">
                 <span>Forum</span>
                 <span>The Discussion Forum</span>
             </a>
@@ -144,9 +144,9 @@ unset($_POST);
                 <span>IIT Patna</span>
                 <span>All about our college</span>
             </a>
-            <a href="http://2016.anwesha.info">
+            <a href="http://2017.anwesha.info">
                 <span>Anwesha</span>
-                <span>Anwesha 2016</span>
+                <span>Anwesha 2017</span>
             </a>
             <a href="./logout.php">
                 <span>Logout</span>
