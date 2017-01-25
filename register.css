@@ -8,11 +8,14 @@ and open the template in the editor.
     Author     : ashutosh
 */
 body {
-    background: url("./images/cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background: url("./images/cover.jpg");
+    background-size: cover;
+    background-color: rgb(100, 91, 92);
 }
 #register{
     margin: 0px auto;	
     width: 500px;
+    height: 500px;
     position: relative;	
     top: 3.5em;
     padding: 8px 6% 60px 6%;
@@ -163,7 +166,7 @@ body {
 }
 #register p.login.button,
 #register p.signin.button{
-    text-align: right;
+    text-align: center;
     margin: 5px 0;
 }
 
