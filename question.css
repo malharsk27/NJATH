@@ -23,8 +23,9 @@
     outline: none; 
 }
 body { 
-    background: url("./images/pro_cover.jpg") repeat scroll center center rgb(100, 91, 92);
-    background-position: absolute;
+    background: url("./images/pro_cover.jpg");
+    background-color: rgb(100, 91, 92);
+    background-size: cover;
 }
 
 #user-info {
