@@ -1,5 +1,7 @@
 <?php
-if(isset($_POST['payload'])) {
+$POST['payload']="[]";
+if(true || isset($_POST['payload']))
+{
 	echo "Attemping Payload\n";
 	$data = json_decode($_POST['payload']);
 	if (json_last_error() == JSON_ERROR_NONE) {
