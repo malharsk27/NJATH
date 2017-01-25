@@ -330,6 +330,15 @@ $question = mysqli_fetch_array(mysqli_query($db_connection, $query));
             unset($wrong_msg);
         }
         ?>
-        <!-- My Sword is Here; http://www.imdb.com/title/tt0944947/trivia -->
+        <!-- 
+		{
+			{
+				{
+					Answer : theeasternsails
+					This is called the pyramid of doom. For more information, google pyramid of doom.
+				}
+			}
+		}
+	-->
     </body>
 </html>  
