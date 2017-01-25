@@ -89,7 +89,7 @@ body {
 #question-div img {
     position: absolute;
     width: 40em;
-    height: 25em;
+    height: auto;
     right: 0;
     top: 1em;
 }
