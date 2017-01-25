@@ -391,11 +391,11 @@ body {
 }
 
 #button-wrapper .a-btn.answered {
-    background-color:#07700D;
+    background-color: #6ab344;
 }
 #button-wrapper .a-btn.answered .a-btn-text {
-    color: #47E56F;
-    text-shadow:0px -1px 1px #006603;
+    color: #365425;
+    text-shadow: 0px -1px 1px #5f7d60;
 }
 #button-wrapper #advance{ 
     text-decoration: none;
