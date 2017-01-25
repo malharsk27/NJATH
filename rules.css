@@ -22,7 +22,9 @@
     outline: none; 
 }
 body {
-    background: url("./images/cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background: url("./images/cover.jpg");
+    background-size: cover;
+    background-color: rgb(100, 91, 92);
 }
 #rules-content {
     position: absolute;
