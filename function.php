@@ -52,7 +52,7 @@ function checkUsername($user) {
 function check() {
     global $error;
     global $CONST;
-    if(isset($_POST["usernamesignup"]) && isset($_POST["anweshasignup"]) && isset($_POST["passwordsignup"]) && isset($_POST['6_letters_code'])){
+    if(isset($_POST["usernamesignup"]) && isset($_POST["anweshasignup"]) && isset($_POST["passwordsignup"])){
 
     } else {
         $error["msg"] = 'Incomplete request';
