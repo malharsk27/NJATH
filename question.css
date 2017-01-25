@@ -50,7 +50,7 @@ body {
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     -ms-transition: all .2s ease-out;
-    background: #F00;
+    background: #80d8ff;
     -webkit-animation: throb 1.5s ease-in-out infinite alternate;
     animation: throb 1.5s ease-in-out infinite alternate;
 }
@@ -138,11 +138,10 @@ body {
     left: 16em;
     padding: em;
     padding-bottom: 1.2em;
-    background-color: #E58452;
+    background-color: #6f6f6f;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
-    box-shadow: 0 -5px 15px #000, 0 15px 20px 6px #a15430 inset;
+    box-shadow: 0 -5px 15px #000, 0 15px 20px 6px #525150 inset;
     -webkit-animation: riseup 2s ease-out 1s 1 normal;
     -moz-animation: riseup 2s ease-out 1s 1 normal;
     -ms-animation: riseup 2s ease-out 1s 1 normal;
@@ -234,7 +233,7 @@ body {
     left: 9em;
     background: #FE9F9D;
     background: -webkit-gradient(linear,left top,left bottom,color-stop(#E58452,0),color-stop(#C47146,1));
-    background: -webkit-linear-gradient(top, #E58452 0%, #C47146 100%);
+    background: -webkit-linear-gradient(top, #0a0a0a 0%, #7d7c7c 100%);
     background: -moz-linear-gradient(top, #E58452 0%, #C47146 100%);
     background: -o-linear-gradient(top, #E58452 0%, #C47146 100%);
     background: linear-gradient(top, #E58452 0%, #C47146 100%);
@@ -244,7 +243,7 @@ body {
     height: 38px;
     display: block;
     position: relative;
-    border: 1px solid #E16E6D;
+    border: 1px solid #5d5d5d;
     -webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
     -moz-box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
     box-shadow: 0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
@@ -260,7 +259,6 @@ body {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     text-decoration: none;
-
 }
 #form-wrapper #submit-btn .btn-text{
     padding-top: 10px;
