@@ -11,9 +11,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         die();
     }
     global $db_connection;
-    $db_username = "root";
-    $db_password = "";
-    $db_connection = mysqli_connect("localhost", $db_username, $db_password, "anwesha_njath");  
+    $db_username = "njath";
+    $db_password = "1ef3XS9cyY5Z3baD";
+    $db_connection = mysqli_connect("localhost", $db_username, $db_password, "njath");  
     $user = $_POST["usernamesignup"];
     $anw = $_POST["anweshasignup"];
     $anw = intval(substr($anw, 3));

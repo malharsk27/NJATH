@@ -101,7 +101,7 @@ require './support/check.php';
                 <span>Leaderboard</span>
                 <span>The Rulers</span>
             </a>
-            <a href="http://www.facebook.com/iit.njath/app_202980683107053">
+            <a href="https://apps.facebook.com/forumforpages/464686653559952/61cb4cc2-6449-4990-a445-9653c65ce60c/0">
                 <span>Forum</span>
                 <span>The Discussion Forum</span>
             </a>
@@ -160,7 +160,7 @@ require './support/check.php';
 
                 <div id="slider_container_2">
 
-                    <div id="SliderName_2" class="SliderName_2">
+                   <div id="SliderName_2" class="SliderName_2">
                         <img src="images/1.jpg" width=100% height=100% alt="Demo2 first" title="Demo2 first" usemap="#img1map" />
                         <map name="img1map">
                             <area href="#img1map-area1" shape="rect" coords="100,100,200,200" />
@@ -178,7 +178,7 @@ require './support/check.php';
                         <img src="images/7.jpg" width="2000" height="450" alt="Demo2 seventh" title="Demo2 seventh" />
                         <div class="SliderName_2Description"><strong>READ THE QUESTION CAREFULLY</strong> </div>
                         
-                    </div>
+                    </div> 
                     <div class="c"></div>
                     <div id="SliderNameNavigation_2"></div>
                     <div class="c"></div>
