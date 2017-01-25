@@ -81,7 +81,7 @@ require_once './support/check.php';
             <ol id="rules-list">
                 <li> <p> NJATH is an online treasure-hunt contest conducted during Anwesha. You will be given questions, and you have to decipher the solution. Be careful with spellings and answers to questions. </p> </li> 
                 <li> <p> Look out for clues and hints everywhere including the URL of the page, the page source and all the details provided in the question. You can use Google, Wikipedia or anything else for help. </p> </li> 
-                <li> <p> Only answers as alpha-numeric characters in lower case (a-z, 0-9) are allowed. e.g. Suppose your answer is “I Love NJATH”, then write it as “ilovenjath”. In case of dates like 31st Jan 2016, write 31012016. </p> </li> 
+                <li> <p> Only answers as alpha-numeric characters in lower case (a-z, 0-9) are allowed. e.g. Suppose your answer is “I Love NJATH123”, then write it as “ilovenjath123”. In case of dates like 31st Jan 2016, write 31012016. </p> </li> 
                 <li> <p> Use Anwesha ID and password only while registering.</p> </li>
                 <li> <p> Stay tuned on the Discussion forum on our FB page for getting hints. </p> </li> 
                 <li> <p> Users providing answers or direct link in any form through any medium will be disqualified. </p> </li>
