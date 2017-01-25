@@ -21,7 +21,9 @@
     outline: none; 
 }
 body {
-    background: url("./images/pro_cover.jpg") repeat scroll center center rgb(100, 91, 92);
+    background: url("./images/pro_cover.jpg");
+    background-size: cover;
+    background-color: rgb(100, 91, 92);
 }
 h2 { 
     padding: 20px 0 10px 0; 
