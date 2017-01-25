@@ -58,7 +58,8 @@ h2 {
     color: white /*rgba(0,0,0,0.45);*/
     text-shadow: 0 0 1px rgba(0,0,0,0.1);
     font-size: 1.5em;
-    background: #B86942;
+    color: #FFF;
+    background: linear-gradient(#353535,#757575,#e0e0e0);
 }
 #table .data-table td {
     color: #f7f7f7;
@@ -67,7 +68,8 @@ h2 {
     font-size: 1.4em;
 }
 #table .data-table tr.user {
-    color: #5483b4;
+    color: #FFF;
+    background: linear-gradient(#353535,#757575,#e0e0e0);
 }
 #table .data-table tr {
     -webkit-transition: background 0.3s, box-shadow 0.3s;
