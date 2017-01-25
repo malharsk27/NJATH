@@ -59,7 +59,7 @@ h2 {
     text-shadow: 0 0 1px rgba(0,0,0,0.1);
     font-size: 1.5em;
     color: #FFF;
-    background: #757575;
+    background: linear-gradient(#353535,#757575,#e0e0e0);
 }
 #table .data-table td {
     color: #f7f7f7;
