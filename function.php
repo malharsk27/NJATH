@@ -65,12 +65,12 @@ function check() {
 
     /**
      * validating captcha
-     */
+     
     if(empty($_SESSION['6_letters_code'] ) || $_SESSION['6_letters_code'] != $_POST['6_letters_code']){
         $error["msg"] = "The captcha code does not match!";
         $error["component"] = "captcha";
         return;
-    }
+    }*/
 
     /**
      * getting the status of login in anwesha website
