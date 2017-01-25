@@ -90,6 +90,7 @@ body {
     position: absolute;
     width: 40em;
     height: auto;
+    max-height: 25em;
     right: 0;
     top: 1em;
 }
