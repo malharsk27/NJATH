@@ -14,11 +14,11 @@ body {
 }
 #register{
     margin: 0px auto;	
-    width: 500px;
+    width: 450px;
     height: 500px;
     position: relative;	
     top: 3.5em;
-    padding: 8px 6% 60px 6%;
+    padding: 8px 5% 60px 4%;
     background: rgb(247, 247, 247);
     border: 1px solid rgba(147, 184, 189,0.8);
     -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
