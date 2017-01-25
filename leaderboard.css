@@ -21,7 +21,7 @@
     outline: none; 
 }
 body {
-    background: url("./images/pro_cover.jpg");
+    background: url("./images/cover.jpg");
     background-size: cover;
     background-color: rgb(100, 91, 92);
 }
