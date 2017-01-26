@@ -205,7 +205,7 @@ body {
     left: 6em;
     top: 2em;
     padding: 5px;
-    border: 1px solid #DDD;
+    border: 1px none #c47146;
     background: -moz-linear-gradient(center bottom , #fff,  #ccc 1px, #fff 20px);    
     background: -webkit-gradient(linear, left bottom, left 20, from(#fff), color-stop(5%, #ccc) to(#fff));
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#FFFFFF');
