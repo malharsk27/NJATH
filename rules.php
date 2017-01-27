@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
+header('Location: http://njath.anwesha.info/closed.html');
 require_once 'function.php';
 require_once './support/dbcon.php';
 $from = "leaderboard";
