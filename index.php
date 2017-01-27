@@ -18,10 +18,10 @@
  */
 
 
-
+header('Location: http://njath.anwesha.info/closed.html');
 require_once 'function.php';
- error_reporting(E_ALL);
- ini_set("display_errors", 1);
+ //error_reporting(E_ALL);
+ //ini_set("display_errors", 1);
 function checkLogin() {
     if (!filter_var($_POST["login"], FILTER_VALIDATE_REGEXP, array("options" => array('regexp' => '/^[\w]{5,15}$/')))) {
         $error["msg"] = "Incorrect username";
