@@ -19,7 +19,7 @@
 
 
 
-
+header('Location: http://njath.anwesha.info/closed.html');
 $from = "leaderboard";
 require_once 'function.php';
 require './support/check.php';
