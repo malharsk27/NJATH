@@ -1,5 +1,5 @@
 <?php
-header('Location: http://njath.anwesha.info/closed.html');
+//header('Location: http://njath.anwesha.info/closed.html');
 $from = "registerpage";
 require_once 'function.php';
 
