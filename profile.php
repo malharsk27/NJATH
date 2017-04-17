@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-header('Location: http://njath.anwesha.info/closed.html');
+//header('Location: http://njath.anwesha.info/closed.html');
 $from = "profilepage";
 require_once 'function.php';
 require './support/check.php';
